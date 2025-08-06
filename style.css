@@ -237,3 +237,33 @@ html {
     font-size: 1.8rem;
   }
 }
+
+.music-control-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#music-toggle-btn {
+  background-color: rgba(0, 95, 115, 0.8);
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+#music-toggle-btn:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
+}
