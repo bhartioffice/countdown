@@ -34,3 +34,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, 1000);
 });
+
+const audio = document.getElementById("background-audio");
+const musicBtn = document.getElementById("music-toggle-btn");
+
+const startMusicOnFirstClick = () => {
+  audio.play();
+  musicBtn.style.display = "flex";
+  window.removeEventListener("click", startMusicOnFirstClick);
+};
+
+window.addEventListener("click", startMusicOnFirstClick);
+
+musicBtn.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    musicBtn.innerHTML = "❚❚ Pause";
+  } else {
+    audio.pause();
+    musicBtn.innerHTML = "▶ Play";
+  }
+});
